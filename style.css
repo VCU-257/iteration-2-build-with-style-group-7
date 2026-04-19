@@ -1,0 +1,33 @@
+.bottom-nav {
+    background-color: #e0e0e0; 
+    height: 80px; 
+}
+
+.nav-item {
+    color: #000;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.nav-item:hover {
+    color: #000;
+}
+
+.nav-item.active {
+    background-color: #c4c4c4; 
+}
+
+.nav-item i {
+    font-size: 1.5rem;
+    -webkit-text-stroke: 1px black; 
+}
+
+.btn-primary{
+
+    --bs-btn-bg: #5C7A1F;
+    --bs-btn-border-color: #5C7A1F;
+    --bs-btn-hover-bg: #77953a;
+    --bs-btn-hover-border-color: #77953a;
+    --bs-btn-active-bg: #5C7A1F;
+
+}
