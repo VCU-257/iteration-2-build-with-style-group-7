@@ -42,6 +42,7 @@ h2{
     color: var(--surface-green-dark);
     font-weight: 600;
     text-align: center;
+    margin-bottom: 16px;
 }
 
 .brand{
@@ -438,6 +439,28 @@ button > a:hover {
     font-size: 0.85rem;
     letter-spacing: 1px;
     box-shadow: var(--shadow-soft);
+}
+
+.modal-content {
+    background-color: var(--bg-secondary) !important;
+    border-radius: var(--radius-lg) !important; /* Forces 0px sharp corners */
+    border: 3px solid rgba(70, 105, 70, 0.1) !important;
+}
+
+.modal-backdrop.show {
+    opacity: 0.6;
+    background-color: var(--surface-green-dark); /* Styled backdrop */
+}
+
+.modal-title {
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.modal .qty-btn {
+    border-color: rgba(70, 105, 70, 0.2) !important;
 }
 
 @keyframes fadeSlideUp {
