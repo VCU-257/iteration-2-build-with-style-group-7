@@ -33,9 +33,15 @@ body:not(:has(.fixed-bottom)) {
     padding-bottom: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
     color: var(--surface-green-dark);
     font-weight: 600;
+}
+
+h2{
+    color: var(--surface-green-dark);
+    font-weight: 600;
+    text-align: center;
 }
 
 .brand{
@@ -93,6 +99,24 @@ body > form {
     box-shadow: 0 0 0 4px rgba(70, 105, 70, 0.15);
 }
 
+/* --------- checkboxes --------- */
+
+.form-check-input {
+    cursor: pointer;
+    border: 2px solid rgba(70, 105, 70, 0.3);
+    transition: all 0.2s ease;
+}
+
+.form-check-input:checked {
+    background-color: var(--surface-green);
+    border-color: var(--surface-green);
+}
+
+.form-check-input:focus {
+    border-color: var(--surface-green);
+    box-shadow: 0 0 0 4px rgba(70, 105, 70, 0.15);
+}
+
 /* --------- cards + buttons --------- */
 
 .card {
@@ -110,6 +134,11 @@ body > form {
 
 .card-body {
     padding: 1.5rem;
+}
+
+.line-border{
+        border-bottom: #9A5B32 2px solid !important;
+
 }
 
 .btn {
@@ -169,13 +198,69 @@ body > form {
     --bs-btn-hover-border-color: #7A4726;
     
     --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #63391f; /* Even darker terracotta for click */
+    --bs-btn-active-bg: #63391f; 
     --bs-btn-active-border-color: #63391f;
     
     --bs-btn-focus-shadow-rgb: 154, 91, 50; 
 }
 
+.list-item {
+    background-color: var(--bg-secondary);
+    border-color: rgba(70, 105, 70, 0.15);
+    color: var(--text-primary);
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-lg) !important;
+    border-width: 0px !important;
+    border-bottom: 2px solid rgba(154, 91, 50, 0.5) !important;
+    padding-right: 20px !important;;
+}
+.badge{
+    margin-right: 0px !important;
+}
 
+.list-item-last{
+    background-color: var(--bg-secondary);
+    border-color: rgba(70, 105, 70, 0.15);
+    color: var(--text-primary);
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-lg) !important;
+    border-width: 0px !important;
+    padding-right: 20px !important;;
+    border-bottom: var(--bg-secondary) 2px solid !important;
+}
+
+.list-item-action:hover {
+    background-color: var(--bg-primary) !important;
+}
+
+
+.qty-btn {
+    width: 28px;
+    height: 28px;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border-color: rgba(102, 74, 61, 0.3) !important; 
+}
+
+.qty-btn:hover {
+    background-color: var(--surface-green) !important;
+    border-color: var(--surface-green) !important;
+    color: #fff !important;
+}
+
+.qty-text {
+    min-width: 20px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--surface-green-dark) !important;
+}
+
+.list-item, .list-item-last {
+    padding-right: 15px !important;
+}
 
 .list-group-item {
     background-color: var(--bg-secondary);
@@ -183,18 +268,30 @@ body > form {
     color: var(--text-primary);
     padding: 1rem 1.25rem;
     border-radius: var(--radius-lg) !important;
+    border-width: 0px !important;
+    border-bottom: 2px solid rgba(154, 91, 50, 0.5) !important;
+}
 
+.list-group-item-last{
+    background-color: var(--bg-secondary);
+    border-color: rgba(70, 105, 70, 0.15);
+    color: var(--text-primary);
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-lg) !important;
+    border-width: 0px !important;
+    border-bottom: var(--bg-secondary) 2px solid !important;
 }
 
 .list-group-item-action:hover {
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
+    background-color: var(--bg-primary) !important;
 }
 
 /* --------- nav --------- */
 .navbar {
     background-color: var(--bg-secondary) !important;
     box-shadow: 0 2px 10px rgba(47, 69, 47, 0.05);
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 .fixed-bottom {
@@ -235,7 +332,7 @@ body > form {
     color: var(--surface-green-dark) !important; 
     display: flex;
     align-items: center;
-    height: 100%; /* Spans the height of the nav to center within it */
+    height: 100%; 
     padding-top: 4px;
     padding-bottom: 0;
     margin-bottom: -8px;
@@ -251,7 +348,7 @@ body > form {
 }
 
 .desktop-nav-tabs .nav-item {
-    width: 110px; /* Fixed width for consistent sliding math */
+    width: 110px; 
     text-align: center;
 }
 
@@ -271,7 +368,7 @@ body > form {
     position: absolute;
     top: 0;
     left: 0;
-    width: 110px; /* Must match .nav-item width */
+    width: 110px;
     height: 100%;
     background-color: rgba(70, 105, 70, 0.12) !important; 
     border-radius: var(--radius-sm);
@@ -309,8 +406,6 @@ button > a {
 button > a:hover {
     color: inherit;
 }
-
-
 
 
 .animate-load-in {
@@ -359,5 +454,11 @@ button > a:hover {
 @media (min-width: 768px) {
     body {
         padding-bottom: 0 !important; 
+    }
+    .desktop-nav-tabs i{
+        display: none !important;
+    }
+    h2{
+        text-align: left;
     }
 }

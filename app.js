@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadHeader();
     loadFAB();
 
-    // Favorite Button Toggle Logic (Visual Only for Prototype)
     document.body.addEventListener('click', function(e) {
         const favBtn = e.target.closest('.favorite-btn');
         
@@ -12,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const icon = favBtn.querySelector('i');
             
-            // Toggle the star icon classes
             if (icon.classList.contains('bi-star')) {
                 icon.classList.remove('bi-star');
                 icon.classList.add('bi-star-fill');
@@ -48,7 +46,7 @@ function loadHeader() {
             const headerPlaceholder = document.getElementById('header-placeholder');
             if (headerPlaceholder) {
                 headerPlaceholder.innerHTML = data;
-                highlightActiveLink();   // ← ADD THIS LINE
+                highlightActiveLink();   
             }
         })
         .catch(error => console.error('Error:', error));
