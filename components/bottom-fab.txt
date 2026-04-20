@@ -1,0 +1,16 @@
+<div class="bottom-fab-container">
+            <div class="container">
+                <div class="row g-2">
+                    <div class="col-6">
+                        <button class="btn btn-success w-100 py-3" type="button">
+                            Create New
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-outline-secondary w-100 py-3" type="button" style="background-color: var(--bg-secondary);">
+                            Join Group
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
